@@ -16,7 +16,5 @@ class Config(object):
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
     ADMINS = ['corentinvdk@gmail.com']
-    POSTS_PER_PAGE = 3
     LANGUAGES = ["en", "fr"]
-    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
     REDIS_URL = os.environ.get('REDIS_URL') or 'redis://'

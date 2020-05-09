@@ -1,4 +1,4 @@
-# Microblog
+# Custoom
 Flask script for website 
 
 # A. Development preparation
@@ -55,7 +55,7 @@ pip install -U pipenv
 SECRET_KEY=(gen by python -c "import uuid; print(uuid.uuid4().hex)")
 MAIL_SERVER=localhost
 MAIL_PORT=25
-DATABASE_URL=mysql+pymysql://microblog:<db-password>@localhost:3306/microblog
+DATABASE_URL=mysql+pymysql://custoom:<db-password>@localhost:3306/custoom
 MS_TRANSLATOR_KEY=<your-translator-key-here>
 
 ## 3.1 Setting up emails
@@ -68,7 +68,7 @@ looks too intense for a small server
 
 ## 3.3 Setting up distrib
 - redis : apt-get install redis-server + gunicorn
-- cp /etc/supervisor/conf.d/microblog.conf
+- cp /etc/supervisor/conf.d/custoom.conf
 /etc/supervisor/conf.d/rq.conf (and adapt content)
 (ideally adapting to multiple processes)
 - sudo supervisorctl reload
@@ -79,9 +79,9 @@ flask translate compile
 # Step 5 : set up db
 setting up db
 mysql -u root -p
-mysql> create database microblog character set utf8 collate utf8_bin;
-mysql> create user 'microblog'@'localhost' identified by 'sZQ9NdjghCGykLwaWjPyfQUu';
-mysql> grant all privileges on microblog.(star) to 'microblog'@'localhost';
+mysql> create database custoom character set utf8 collate utf8_bin;
+mysql> create user 'custoom'@'localhost' identified by 'sZQ9NdjghCGykLwaWjPyfQUu';
+mysql> grant all privileges on custoom.(star) to 'custoom'@'localhost';
 mysql> flush privileges;
 mysql> quit;
 
@@ -92,10 +92,10 @@ GRANT ALL PRIVILEGES ON *.* TO 'debian'@'localhost';
 UPDATE user SET plugin='unix_socket' WHERE User='debian';
 
 # Step 6 : deploy
-gunicorn file (/etc/supervisor/conf.d/microblog.conf):
-[program:microblog]
-command=/home/ubuntu/microblog/venv/bin/gunicorn -b localhost:8000 -w 4 microblog:app
-directory=/home/ubuntu/microblog
+gunicorn file (/etc/supervisor/conf.d/custoom.conf):
+[program:custoom]
+command=/home/ubuntu/custoom/venv/bin/gunicorn -b localhost:8000 -w 4 custoom:app
+directory=/home/ubuntu/custoom
 user=ubuntu
 autostart=true
 autorestart=true
@@ -106,7 +106,7 @@ where gunicorn is referenced from virtualenv
 useful commands:
 sudo supervisorctl status all
 sudo supervisorctl reload
-sudo vim /etc/nginx/sites-enabled/microblog
+sudo vim /etc/nginx/sites-enabled/custoom
 sudo nginx -c /etc/nginx/nginx.conf -t
 sudo service nginx reload
 service nginx status
@@ -114,15 +114,15 @@ service nginx status
 # Step 7 : get certificate using certbot
 see tutorial. If issues:
 sudo apt-get install dirmngr
-sudo certbot certonly --webroot -w /home/debian/microblog/app/static -d thementaldoctors.com
+sudo certbot certonly --webroot -w /home/debian/custoom/app/static -d thementaldoctors.com
 
 # Step 8 : update application
 (venv) $ git pull                              # download the new version
 (vend) $ (pipenv install) if modif made
-(venv) $ sudo supervisorctl stop microblog     # stop the current server
+(venv) $ sudo supervisorctl stop custoom     # stop the current server
 (venv) $ flask db upgrade                      # upgrade the database
 (venv) $ flask translate compile               # upgrade the translations
-(venv) $ sudo supervisorctl start microblog    # start a new server
+(venv) $ sudo supervisorctl start custoom    # start a new server
 
 # Step 9 : misc
 
