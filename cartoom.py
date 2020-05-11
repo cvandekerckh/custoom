@@ -1,5 +1,5 @@
 from app import create_app, db, cli
-from app.models import User
+from app.models import Buyer
 
 app = create_app()
 cli.register(app)
@@ -9,5 +9,5 @@ cli.register(app)
 def make_shell_context():
     return {
         'db': db,
-        'User': User,
+        'Buyer': Buyer,
     }
