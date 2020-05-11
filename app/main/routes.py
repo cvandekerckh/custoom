@@ -7,7 +7,7 @@ from app import db
 from app.main.forms import OrderForm
 from app.translate import translate
 from app.main import bp
-
+from app.models import Story
 
 @bp.before_app_request
 def before_request():
@@ -17,14 +17,17 @@ def before_request():
 @bp.route('/', methods=['GET', 'POST'])
 @bp.route('/index', methods=['GET', 'POST'])
 def index():
-    form = OrderForm(request.form)
+    form = OrderForm()
     print(request.form)
     if request.method == 'POST':
-    #if form.validate_on_submit():
-        print("coco")
-        print(form.email.data)
-        print(form.phone.data)
-        print(form.message.data)
+        story = Story(
+            nickname = form.nickname.data,
+            gender = form.gender.data,
+            location = form.location.data,
+            body = form.body.data
+        )
+        db.session.add(story)
+        db.session.commit()
         flash(_('Votre commande a bien été enregistrée'))
         return redirect(url_for('main.index'))
     return render_template('index.html', form=form)

@@ -27,6 +27,8 @@ pymysql = "*"
 rq = "*"
 httpie = "*"
 flask-httpauth = "*"
+pandas = "*"
+psycopg2-binary = "*"
 
 [requires]
 python_version = "3.7.4"

@@ -7,10 +7,10 @@ from flask_babel import _, lazy_gettext as _l
 
 
 class OrderForm(FlaskForm):
-    name = StringField(_l('Name'), validators=[DataRequired()])
-    email = StringField(_l('Email'), validators=[DataRequired()])
-    phone = StringField(_l('Phone'), validators=[DataRequired()])
-    message = TextAreaField(_l('Message'),
+    nickname = StringField(_l('Nickname'), validators=[DataRequired()])
+    gender = StringField(_l('Gender'), validators=[DataRequired()])
+    location = StringField(_l('Location'), validators=[DataRequired()])
+    body = TextAreaField(_l('Body'),
                              validators=[Length(min=0, max=140)])
     submit = SubmitField(_l('Submit'))
 

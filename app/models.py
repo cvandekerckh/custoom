@@ -29,7 +29,7 @@ class Story(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     gender = db.Column(db.String(10))
     nickname = db.Column(db.String(64))
-    place = db.Column(db.String(64))
+    location = db.Column(db.String(64))
     body = db.Column(db.String(140))
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     buyer_id = db.Column(db.Integer, db.ForeignKey('buyer.id'))
