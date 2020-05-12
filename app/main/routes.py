@@ -8,6 +8,12 @@ from app.main.forms import OrderForm
 from app.translate import translate
 from app.main import bp
 from app.models import Story
+from utils.google_sheet import db_to_sheet
+
+
+SHEET_REFERENCE = "11RJsiBKrRY1bTjwm0qg-KvZZJHR18pcMN3GoLPbHoe0"
+TAB_NAME = "data"
+
 
 @bp.before_app_request
 def before_request():
@@ -28,6 +34,12 @@ def index():
         story.link_album()
         db.session.add(story)
         db.session.commit()
+        db_to_sheet(
+            "story",
+            'sqlite:///app.db', #current_app.config["SQLALCHEMY_DATABASE_URI"],
+            SHEET_REFERENCE,
+            TAB_NAME,
+        )
         flash(_('Votre commande a bien été enregistrée'))
         return redirect(url_for('main.index'))
     return render_template('index.html', form=form)
