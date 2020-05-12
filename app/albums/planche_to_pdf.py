@@ -6,40 +6,60 @@ BLEED = 3.18 # mm
 LIVE_WIDTH = 254 # mm
 LIVE_HEIGHT = 191 # mm
 TEXT_HEIGHT = 20 # mm
+METRIC = 'mm'
+FONT_NAME = 'Arial'
+FONT_SIZE = 15
+STORY_TEXT = 'Au coeur de la forêt de  %(location)s, le cerf remercia %(nickname)s pour son aide'
+TEMPLATE_IMG = "template.jpg"
+PLANCHE_IMG = "planche_in.jpg"
 
-# save FPDF() class into a
-# variable pdf
-pdf = FPDF('P', 'mm', DOCUMENT_SIZE)
 
-# Add a page
-pdf.add_page()
+def prepare_template():
+    pdf = FPDF('P', METRIC, DOCUMENT_SIZE)
+    pdf.add_page()
+    pdf.set_font(FONT_NAME, size = FONTSIZE)
+    pdf.set_auto_page_break(False)
+    return pdf
 
-# set style and size of font
-# that you want in the pdf
-pdf.set_font("Arial", size = 15)
-pdf.set_auto_page_break(False)
+def add_planches(pdf, live_start):
+    pdf.image(
+        TEMPLATE_IMG,
+        x=0,
+        y=0,
+        w=DOCUMENT_SIZE[0],
+    )
+    pdf.image(
+        PLANCHE_IMG,
+        x=live_start,
+        y=live_start,
+        w=LIVE_WIDTH,
+    )
+    return pdf
 
-# add image
-live_start = SAFETY+BLEED
-pdf.image(
-    "template.jpg",
-    x=0,
-    y=0,
-    w=DOCUMENT_SIZE[0],
-)
-pdf.image(
-    "planche_2.jpg",
-    x=live_start,
-    y=live_start,
-    w=LIVE_WIDTH,
-)
 
-# add text
-# Move to to the right
-start_text_y = live_start+LIVE_HEIGHT-TEXT_HEIGHT
-pdf.set_xy(live_start, start_text_y)
-# Centered text in a framed 20*10 mm cell and line break
-pdf.cell(LIVE_WIDTH, TEXT_HEIGHT, "C'est alors que le cerf les remercia pour leur aide. Il inclina la tête en guise de remerciement", 1, 1, 'C')
+def parse_text(variable_dict, story_text):
+    return story_text % variable_dict
 
-# save the pdf with name .pdf
-pdf.output("planche_out.pdf")
+
+def add_text(pdf, text, live_start):
+    start_text_y = live_start+LIVE_HEIGHT-TEXT_HEIGHT
+    pdf.set_xy(live_start, start_text_y)
+    pdf.cell(
+        LIVE_WIDTH,
+        TEXT_HEIGHT,
+        text,
+        1,
+        1,
+        'C'
+    )
+    return pdf
+
+
+def create_album(variable_dict, album_filename):
+    live_start = SAFETY+BLEED
+    text = parse_text(variable_dict, STORY_TEXT)
+    pdf = prepare_template()
+    pdf = add_planches(pdf, live_start)
+    pdf = add_text(pdf, text, live_start)
+    pdf.output(album_filename)
+

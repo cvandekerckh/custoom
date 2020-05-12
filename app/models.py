@@ -33,7 +33,11 @@ class Story(db.Model):
     body = db.Column(db.String(140))
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     buyer_id = db.Column(db.Integer, db.ForeignKey('buyer.id'))
+    album = db.Column(db.String(2083))
 
     def __repr__(self):
         return '<Story {}>'.format(self.nickname)
 
+
+    def create_album(self):
+        pass
