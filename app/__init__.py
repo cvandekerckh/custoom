@@ -10,6 +10,7 @@ from flask_moment import Moment
 from flask_babel import Babel, lazy_gettext as _l
 from config import Config
 from redis import Redis
+from albums.pdf_to_drive import initialize_drive
 import rq
 
 
@@ -19,6 +20,7 @@ mail = Mail()
 bootstrap = Bootstrap()
 moment = Moment()
 babel = Babel()
+drive = initialize_drive()
 
 
 def create_app(config_class=Config):

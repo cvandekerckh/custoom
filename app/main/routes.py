@@ -18,7 +18,6 @@ def before_request():
 @bp.route('/index', methods=['GET', 'POST'])
 def index():
     form = OrderForm()
-    print(request.form)
     if request.method == 'POST':
         story = Story(
             nickname = form.nickname.data,
@@ -26,6 +25,7 @@ def index():
             location = form.location.data,
             body = form.body.data
         )
+        story.link_album()
         db.session.add(story)
         db.session.commit()
         flash(_('Votre commande a bien été enregistrée'))

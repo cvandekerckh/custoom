@@ -131,3 +131,6 @@ dmypy.json
 
 # Logs
 logs/
+
+# Google API key
+client_secrets.json

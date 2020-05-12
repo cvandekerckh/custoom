@@ -6,6 +6,13 @@ from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 import jwt
 from app import db
+from app import drive
+from albums.planche_to_pdf import create_album
+from albums.pdf_to_drive import upload_on_drive
+
+
+def get_class_variables(class_name):
+    return {key:value for key, value in class_name.__dict__.items() if not key.startswith('__') and not callable(key)}
 
 
 class Buyer(db.Model):
@@ -39,5 +46,10 @@ class Story(db.Model):
         return '<Story {}>'.format(self.nickname)
 
 
-    def create_album(self):
-        pass
+    def link_album(self):
+        variable_dict = get_class_variables(self)
+        album_name = f"{self.nickname.lower()}_{self.location.lower()}"
+        create_album(variable_dict, album_name)
+        drive_url = upload_on_drive(drive, album_name)
+        self.album = drive_url
+
