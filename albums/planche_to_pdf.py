@@ -12,7 +12,7 @@ FONT_SIZE = 15
 STORY_TEXT = 'Au coeur de la forêt de %(location)s, le cerf remercia %(nickname)s pour son aide'
 TEMPLATE_IMG = "lulu_template.jpg"
 PLANCHE_IMG = "planche_in.jpg"
-ALBUMS_PATH = "albums"
+
 
 def prepare_template():
     pdf = FPDF('P', METRIC, DOCUMENT_SIZE)
@@ -21,9 +21,9 @@ def prepare_template():
     pdf.set_auto_page_break(False)
     return pdf
 
-def add_planches(pdf, live_start):
-    template_file = f"{ALBUMS_PATH}/{TEMPLATE_IMG}"
-    planche_file  = f"{ALBUMS_PATH}/{PLANCHE_IMG}"
+def add_planches(pdf, live_start, albums_path):
+    template_file = f"{albums_path}/{TEMPLATE_IMG}"
+    planche_file  = f"{albums_path}/{PLANCHE_IMG}"
     pdf.image(
         template_file,
         x=0,
@@ -57,12 +57,12 @@ def add_text(pdf, text, live_start):
     return pdf
 
 
-def create_album(variable_dict, album_filename):
-    album_file = f"{ALBUMS_PATH}/{album_filename}.pdf"
+def create_album(variable_dict, album_filename, albums_path):
+    album_file = f"{albums_path}/{album_filename}.pdf"
     live_start = SAFETY+BLEED
     text = parse_text(variable_dict, STORY_TEXT)
     pdf = prepare_template()
-    pdf = add_planches(pdf, live_start)
+    pdf = add_planches(pdf, live_start, albums_path)
     pdf = add_text(pdf, text, live_start)
     pdf.output(album_file)
 

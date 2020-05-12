@@ -11,6 +11,8 @@ from albums.planche_to_pdf import create_album
 from albums.pdf_to_drive import upload_on_drive
 
 
+ALBUMS_PATH = "albums"
+
 def get_class_variables(class_name):
     return {key:value for key, value in class_name.__dict__.items() if not key.startswith('__') and not callable(key)}
 
@@ -49,7 +51,7 @@ class Story(db.Model):
     def link_album(self):
         variable_dict = get_class_variables(self)
         album_name = f"{self.nickname.lower()}_{self.location.lower()}"
-        create_album(variable_dict, album_name)
-        drive_url = upload_on_drive(drive, album_name)
+        create_album(variable_dict, album_name, ALBUMS_PATH)
+        drive_url = upload_on_drive(drive, album_name, ALBUMS_PATH)
         self.album = drive_url
 
