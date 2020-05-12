@@ -29,6 +29,8 @@ httpie = "*"
 flask-httpauth = "*"
 pandas = "*"
 psycopg2-binary = "*"
+fpdf = "*"
+pydrive = "*"
 
 [requires]
 python_version = "3.7.4"
