@@ -15,6 +15,17 @@ class OrderForm(FlaskForm):
     submit = SubmitField(_l('Submit'))
 
 
+    first_name = StringField(_l('Prénom'), validators=[DataRequired()])
+    last_name = StringField(_l('Nom de famille'), validators=[DataRequired()])
+    email = StringField(_l('Adresse email'), validators=[DataRequired()])
+    address_1 = StringField(_l('Adresse postale'), validators=[DataRequired()])
+    address_2 = StringField(_l("Complement d'adresse"))
+    city = StringField(_l('Ville'), validators=[DataRequired()])
+    country = StringField(_l('Pays'), validators=[DataRequired()])
+    postal_code = StringField(_l('Code postal'), validators=[DataRequired()])
+    state = StringField(_l('Etat/province'))
+
+
 class EditProfileForm(FlaskForm):
     username = StringField(_l('Username'), validators=[DataRequired()])
     about_me = TextAreaField(_l('About me'),

@@ -8,11 +8,13 @@ from app.main.forms import OrderForm
 from app.translate import translate
 from app.main import bp
 from app.models import Story
+from app.models import Buyer
 from utils.google_sheet import db_to_sheet
 
 
 SHEET_REFERENCE = "11RJsiBKrRY1bTjwm0qg-KvZZJHR18pcMN3GoLPbHoe0"
-TAB_NAME = "data"
+BUYER_TAB_NAME = "clients"
+STORY_TAB_NAME = "albums"
 
 
 @bp.before_app_request
@@ -25,20 +27,40 @@ def before_request():
 def index():
     form = OrderForm()
     if request.method == 'POST':
+        buyer = Buyer(
+            first_name = form.first_name.data,
+            last_name = form.last_name.data,
+            email = form.email.data,
+            address_1 = form.address_1.data,
+            address_2 = form.address_2.data,
+            city = form.city.data,
+            country = form.country.data,
+            postal_code = form.postal_code.data,
+            state = form.state.data,
+        )
+        db.session.add(buyer)
+        db.session.commit()
         story = Story(
             nickname = form.nickname.data,
             gender = form.gender.data,
             location = form.location.data,
-            body = form.body.data
+            body = form.body.data,
+            author = Buyer.query.filter_by(email=form.email.data).first_or_404()
         )
         story.link_album()
         db.session.add(story)
         db.session.commit()
         db_to_sheet(
+            "buyer",
+            'sqlite:///app.db', #current_app.config["SQLALCHEMY_DATABASE_URI"],
+            SHEET_REFERENCE,
+            BUYER_TAB_NAME,
+        )
+        db_to_sheet(
             "story",
             'sqlite:///app.db', #current_app.config["SQLALCHEMY_DATABASE_URI"],
             SHEET_REFERENCE,
-            TAB_NAME,
+            STORY_TAB_NAME,
         )
         flash(_('Votre commande a bien été enregistrée'))
         return redirect(url_for('main.index'))
