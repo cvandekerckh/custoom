@@ -1,0 +1,158 @@
+#enfant$
+#chien
+#ville
+#ami$
+#gateau$
+
+@Figure : 1
+@Description : dans la maison des grands-parents, dans le salon, on voit la silhouette de l'enfant. À côté, le papy et et la mamy.
+@Texte :
+Aujourd'hui, je suis super content$(e)$enfant car je passe la journée chez mes grands-parents. Ils habitent à #ville et tout près de chez eux, se trouve une grande forêt.
+Mon papy m'a toujours promis qu'on irait s'y balader mais nous n'avons jamais eu l'occasion. Peut-être irons-nous cette après midi? En attendant, je dessine cette forêt longtemps rêvée.
+
+
+@Figure : 2
+@Description : dans la cour de la maison, avec deux poules et un chat qui dort et le chien en silhouette. L'enfant joue à la balle avec le chien et le papy arrive par le fond du jardin...
+@Texte :
+Alors que je joue au ballon avec #chien, le chien de mes grands-parents, mon papy s'avance pour me féliciter. Je ne comprends pas bien pourquoi... Il me dit qu'il est très fier du dessin que j'ai réalisé plus tôt dans la journée. Pour lui, le paysage de la forêt est reproduit de façon très réaliste. Je rougis. Mon papy ne me dit pas souvent de compliments alors quand j'en reçois, je sais que c'est très sincère. Et puis, d'un coup, il m'annonce une grande nouvelle :
+
+- Mets tes bottines #enfant! Je t'emmène dans la forêt!
+- Hourra!
+
+J'explose de joie et je file lacer mes chaussures.
+
+
+@Figure : 3
+@Description : peinture déjà réalisée, le papy, l'enfant et le chien sur le sentier de la forêt.
+@Texte :
+#chien, #enfant et son papy s'enfoncent peu à peu sur l'unique sentier de la forêt. C'est la première fois que #enfant se retrouve dans une forêt aussi grande. #enfant est émerveillé$(e)$enfant par la beauté de l'endroit et est en même temps, un peu impressionné$(e) par le silence régnant autour d'eux. Seuls quelques chants d'oiseaux résonnent dans l'étendue boisée. Les grands arbres sont très imposants et #enfant devine à peine le sentier qui s'enfuit au loin.
+On raconte à ville, que cette forêt serait enchantée mais #enfant n'en sait pas plus.
+
+
+@Figure : 4
+@Description : v. photo de l'hermitage, le sentier se poursuit et on voit une petite cabane rouge-orangée au loin, elle est abandonnée. Le papy et l'enfant s'en approche. Il y a aussi un petit puits à côté.
+@Texte :
+La promenade est vraiment très agréable. L'air est frais mais il fait tellement chaud que ça fait du bien d'être à l'ombre.
+Soudainement, #enfant aperçoit, au bout du chemin, une petite cabane rouge-orangée.
+
+- C'est par là! S'écrie le papy de #enfant.
+- On va aller dans la maison papy?
+- Oui #enfant. Mais ne te tracasse pas, on ne rentre pas et elle est abandonnée. C'est pour te montrer un peu. Et puis, de toute façon, notre chemin passe par là donc on est bien obligés.
+
+Un peu inquiet$(ète)$enfant et intrigué$(e)$enfant, #enfant suit son papy et #chien.
+
+
+@Figure : 5
+@Description : Tous les trois sont devant la maison cette fois, plus près. Le papy tient la main du petit. Et le chien tourne autour de la cabane.
+@Texte :
+- Tu vois petit$(e)$enfant,  cette maison appartenait au gardien de la forêt. Il veillait sur les arbres, les fleurs et les animaux. Si quelqu'un venait faire une bêtise, il le savait tout de suite et courrait protéger tous ses habitants.
+- Il est où maintenant papy?
+- Il ne vit plus ici.
+- Mais, plus personne ne protège cet endroit alors?
+- Non #enfant. Aujourd'hui, ceux qui dirigent préfèrent abandonner les forêts à leur sort. Mais ne t'en fais pas! Elle se porte à merveille! Cette forêt est vieille et enchantée. On raconte qu'on ne peut lui faire de mal sinon le roi de la forêt rentrerait dans une grande colère!
+- Le roi de la forêt?
+- Oui petit$(e)$enfant, le roi de la forêt!
+- Mais, qui est-ce papy?
+- Continuons! Je t'expliquerai en chemin! Tu viens #enfant?
+
+
+@Figure : 6
+@Description : Les trois compagnons arrivent à la fin du chemin. Le papy voit au loin des déchets. Dessin déjà réalisé.
+@Texte :
+Un peu plus loin dans la forêt, le papy s'arrête d'un coup et s'écrie :
+
+- Mais qu'est-ce que c'est que ce carnage!!!
+- Que se passe-t-il papy?
+- Tu ne vois pas? Regarde là-bas!
+
+Le papy tend son bras et pointe une clairière remplie de détritus.
+
+- Ce n'est pas possible! Ça n'y était pas la semaine dernière! Allons voir!
+
+
+@Figure : 7
+@Description : Dessin déjà réalisé, ils observent les détritus de plus près.
+@Texte :
+- Dis papy, pourquoi y-a-t-il un frigo, un matelas et des pneus ici?
+
+Le vieil homme n'a pour réponse qu'un profond silence. #enfant comprend alors que son papy est triste et que ces déchets ne doivent pas se trouver là.
+
+Après quelques minutes sans rien dire, le papy de #enfant annonce, très décidé :
+
+- Bon, j'appelle ta mamy, ton papa et d'autres amis pour venir tout retirer, tu en penses quoi #enfant?
+- Je pense que je suis d'accord!
+- Très bien, nous allons enlever tous ces horribles déchets!
+- Wouaf!
+
+
+@Figure : 8
+@Description : on voit une chaîne de personnes déplacer les objets.
+@Texte :
+Tandis que #enfant commence à retirer des sacs de détritus avec son papy, une grande partie des amis de papy arrive en faisant des grands signes. Tous se mettent au travail et un incroyable élan de solidarité déferle sur la clairière. Tout le monde s'entraide dans la bonne humeur pour nettoyer l'endroit.
+&(Le meilleur ami)&ami$(La meilleure amie)$ami de #enfant est même venu$(e)$ami soutenir #enfant!
+
+
+@Figure : 9
+@Description : la clairière est à nouveau propre. Tout le monde discute en buvant une boisson et un gâteau préparé par la mamy!
+@Texte :
+La clairière est maintenant débarrassée des déchets et tous les amis de la famille se retrouvent pour boire une bonne limonade maison préparée par mamy! Mais ce n'est pas tout, mamy a aussi apporté le gâteau préféré de #enfant : un$(e)$gateau #gateau.
+- Mmmmmh
+
+@Figure : 10
+@Description : Il ne reste plus que le papy et l'enfant + le chien. Tout le monde est parti – toujours dans la clairière.
+@Texte :
+Tout le monde est maintenant parti et #enfant ne peut contenir sa joie d'avoir pu rendre la forêt aussi propre qu'avant.
+
+- Tu vois #enfant, certaines personnes pensent que ce genre d'endroit est une grande poubelle. Mais elles oublient que c'est la maison des animaux et des plantes. Aujourd'hui, je suis très fier de toi #enfant!
+
+Le chien aboie car il est très content aussi puis, se remettent en route.
+
+
+@Figure : 11
+@Description : Les revoilà sur le chemin de la forêt. Des petits animaux sont autour d'eux dans la forêt.
+@Texte :
+Sur le chemin du retour, #enfant repense à ce que son papy lui a dit plus tôt dans la journée et ne peut s'empêcher de demander :
+- Papy?
+- Oui #enfant?
+- Tu penses que le roi de la forêt est content aussi?
+- Sûrement! Il a sans doute vu tout le travail que tu as accompli aujourd'hui et au fond de lui, il doit te remercier très fort.
+- Mais, qui est-ce?
+- Tu vas peut-être le voir...
+
+
+@Figure : 12
+@Description : Sur le chemin, l'enfant, se retourne car il entend du bruit... Son papy et le chien sont déjà un peu plus en avant.
+@Texte :
+Alors qu'ils s'approchent de plus en plus de la ville de #ville, #enfant sursaute en entendant un bruit derrière &(lui)&enfant$(elle)$enfant. Intrigué$(e)$enfant par ce léger craquement de branche, #enfant décide de s'arrêter pour mieux écouter d'où provient le son...
+
+
+@Figure : 13
+@Description : Planche réalisée. Le cerf s'avance vers l'enfant qui, prudent, reste près de l'arbre.
+@Texte :
+Tout à coup, #enfant voit un cerf venir dans sa direction. L'enfant n'a pas peur, étrangement. #enfant remarque, dans les yeux de bête, une extrême gentillesse. Sans se quitter du regard, tous deux s'approchent l'un de l'autre jusqu'à ce que le cerf décide de s'arrêter, à quelques mètres seulement de #enfant.
+
+
+@Figure : 14
+@Description : Planche réalisée. Le cerf s'incline!
+@Texte :
+Et puis, doucement, le cerf incline la tête devant #enfant. L'instant est solennel et les deux êtres se regardent avec respect. L'animal demeure dans cette position quelques secondes puis, aussi vite qu'il était apparu, dans un bond gigantesque, regagne la profondeur de la forêt.
+
+
+@Figure : 15
+@Description : L'enfant rejoint son papy et le chien.
+@Texte :
+Tandis que la Lune démarre sa ronde de nuit, #enfant court rejoindre son papy et #chien.
+
+- Alors #enfant, je vois que tu as fait la connaissance du roi de la forêt?
+- Oui papy.
+- Il est venu te remercier d'avoir rendu sa forêt aussi propre qu'avant. Il ne l'oubliera jamais!
+
+
+@Figure : 16
+@Description : Planche réalisée.  Le cerf regarde une dernière fois les visiteurs.
+@Texte :
+Les paroles du papy résonnent dans la tête de #enfant qui n'en revient toujours pas d'avoir rencontré le roi de la forêt! Ces deux êtres sont maintenant connectés, c'est sûr!
+Poussé$(e)$enfant par son intuition, #enfant décide de regarder une dernière fois derrière &(lui)&enfant$(elle)$enfant. Au loin, éclairé par les rayons de la Lune, le grand cerf s'est aussi retourné. Il observe avec douceur la marche des visiteurs.
+
+Depuis ce jour, #enfant s'est juré de toujours veiller sur la forêt et de toujours respecter la nature, mère de tous les êtres sur la Terre.
+
