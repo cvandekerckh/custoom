@@ -43,7 +43,7 @@ Un peu inqui$(et)nickname=male$(ète)nickname=female et intrigué$(e)nickname=fe
 
 
 @Figure : 5
-@Description : Tous les trois sont devant la maison cette fois, plus près. Le papy tient la main du petit. Et le chien tourne autour de la cabane.
+@Description : tous les trois sont devant la maison cette fois, plus près. Le papy tient la main du petit. Et le chien tourne autour de la cabane.
 @Texte :
 - Tu vois petit$(e)nickname=female,  cette maison appartenait au gardien de la forêt. Il veillait sur les arbres, les fleurs et les animaux. Si quelqu'un venait faire une bêtise, il le savait tout de suite et courrait protéger tous ses habitants.
 - Il est où maintenant papy?
@@ -57,7 +57,7 @@ Un peu inqui$(et)nickname=male$(ète)nickname=female et intrigué$(e)nickname=fe
 
 
 @Figure : 6
-@Description : Les trois compagnons arrivent à la fin du chemin. Le papy voit au loin des déchets. Dessin déjà réalisé.
+@Description : les trois compagnons arrivent à la fin du chemin. Le papy voit au loin des déchets. Dessin déjà réalisé.
 @Texte :
 Un peu plus loin dans la forêt, le papy s'arrête d'un coup et s'écrie :
 
