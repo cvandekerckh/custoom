@@ -16,7 +16,7 @@ Mon papy m'a toujours promis qu'on irait s'y balader mais nous n'avons jamais eu
 @Texte :
 Alors que je joue au ballon avec %(dog)s, le chien de mes grands-parents, mon papy s'avance pour me féliciter. Je ne comprends pas bien pourquoi... 
 Il me dit qu'il est très fier du dessin que j'ai réalisé plus tôt dans la journée. 
-Pour lui, le paysage de la forêt est reproduit de façon très réaliste. Je rougis. 
+Pour lui, le dessin du paysage de la forêt est très ressemblant. Je rougis. 
 Mon papy ne me dit pas souvent de compliments alors quand j'en reçois, je sais que c'est très sincère. 
 Et puis, d'un coup, il m'annonce une grande nouvelle :
 
@@ -77,7 +77,7 @@ Le papy tend son bras et pointe une clairière remplie de détritus.
 @Figure : 7
 @Description : Dessin déjà réalisé, ils observent les détritus de plus près.
 @Texte :
-- Dis papy, pourquoi y-a-t-il un frigo, un matelas et des pneus ici?
+- Dis papy, pourquoi un frigo, un matelas et des pneus se trouvent ici?
 
 Le vieil homme n'a pour réponse qu'un profond silence. %(nickname)s comprend alors que son papy est triste et que ces déchets ne doivent pas se trouver là.
 
