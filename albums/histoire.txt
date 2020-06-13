@@ -14,7 +14,11 @@ Mon papy m'a toujours promis qu'on irait s'y balader mais nous n'avons jamais eu
 @Figure : 2
 @Description : dans la cour de la maison, avec deux poules et un chat qui dort et le chien en silhouette. L'enfant joue à la balle avec le chien et le papy arrive par le fond du jardin...
 @Texte :
-Alors que je joue au ballon avec %(dog)s, le chien de mes grands-parents, mon papy s'avance pour me féliciter. Je ne comprends pas bien pourquoi... Il me dit qu'il est très fier du dessin que j'ai réalisé plus tôt dans la journée. Pour lui, le paysage de la forêt est reproduit de façon très réaliste. Je rougis. Mon papy ne me dit pas souvent de compliments alors quand j'en reçois, je sais que c'est très sincère. Et puis, d'un coup, il m'annonce une grande nouvelle :
+Alors que je joue au ballon avec %(dog)s, le chien de mes grands-parents, mon papy s'avance pour me féliciter. Je ne comprends pas bien pourquoi... 
+Il me dit qu'il est très fier du dessin que j'ai réalisé plus tôt dans la journée. 
+Pour lui, le paysage de la forêt est reproduit de façon très réaliste. Je rougis. 
+Mon papy ne me dit pas souvent de compliments alors quand j'en reçois, je sais que c'est très sincère. 
+Et puis, d'un coup, il m'annonce une grande nouvelle :
 
 - Mets tes bottines %(nickname)s! Je t'emmène dans la forêt!
 - Hourra!
