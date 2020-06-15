@@ -26,6 +26,7 @@ def before_request():
 @bp.route('/index', methods=['GET', 'POST'])
 def index():
     form = OrderForm()
+    print(form)
     if request.method == 'POST':
         buyer = Buyer(
             first_name = form.first_name.data,
@@ -42,8 +43,13 @@ def index():
         db.session.commit()
         story = Story(
             nickname = form.nickname.data,
-            gender = form.gender.data,
+            nickname_gender = form.nickname_gender.data,
             location = form.location.data,
+            dog = form.dog.data,
+            friend = form.friend.data,
+            friend_gender = form.friend_gender.data,
+            cake = form.cake.data,
+            cake_gender = form.cake_gender.data,
             body = form.body.data,
             author = Buyer.query.filter_by(email=form.email.data).first_or_404()
         )

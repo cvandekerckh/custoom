@@ -1,5 +1,4 @@
 from fpdf import FPDF
-from parse_story import parse_story
 
 DOCUMENT_SIZE = (286, 222)
 SAFETY = 12.7 # mm
@@ -40,7 +39,6 @@ def insert_text(text, pdf, live_start):
     pdf.add_page()
     start_text_y = live_start+40
     pdf.set_xy(live_start, start_text_y)
-    print(text)
     pdf.multi_cell(
         LIVE_WIDTH,
         TEXT_HEIGHT,
@@ -83,23 +81,21 @@ def assemble_pdf(parsed_list, live_start, albums_path):
 
 
 
-def create_album(parsed_list, output_file, albums_path):
+def create_album(parsed_list, output_filename, albums_path):
     live_start = SAFETY+BLEED
     pdf = assemble_pdf(parsed_list, live_start, albums_path)
-    pdf.output(output_file)
+    pdf.output(f"{output_filename}.pdf")
 
 
 
 custom_dict = {
-    "location": "Dinant",
-    "nickname": "Léa",
-    "friend": "Didier",
-    "dog": "Patmolle",
-    "cake": "glace"
-    "nickname_gender": "female",
-    "friend_gender": "male",
+    "location": "Enghien",
+    "nickname": "Corentin",
+    "friend": "Charlotte",
+    "dog": "Sultan",
+    "cake": "glace",
+    "nickname_gender": "male",
+    "friend_gender": "female",
     "cake_gender": "female"
 }
 
-parsed_list = parse_story("albums/histoire.txt", custom_dict)
-create_album(parsed_list, "albums/tmp.pdf", "albums/planches")

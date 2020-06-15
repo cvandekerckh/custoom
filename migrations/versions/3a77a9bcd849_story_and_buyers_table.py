@@ -1,8 +1,8 @@
-"""empty message
+"""story and buyers table
 
-Revision ID: 8a21296378cf
+Revision ID: 3a77a9bcd849
 Revises: 
-Create Date: 2020-05-11 16:59:46.737759
+Create Date: 2020-06-15 14:57:00.725513
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '8a21296378cf'
+revision = '3a77a9bcd849'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -36,12 +36,18 @@ def upgrade():
     op.create_index(op.f('ix_buyer_last_name'), 'buyer', ['last_name'], unique=False)
     op.create_table('story',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('gender', sa.String(length=10), nullable=True),
     sa.Column('nickname', sa.String(length=64), nullable=True),
+    sa.Column('nickname_gender', sa.String(length=64), nullable=True),
     sa.Column('location', sa.String(length=64), nullable=True),
+    sa.Column('dog', sa.String(length=64), nullable=True),
+    sa.Column('friend', sa.String(length=64), nullable=True),
+    sa.Column('friend_gender', sa.String(length=64), nullable=True),
+    sa.Column('cake', sa.String(length=64), nullable=True),
+    sa.Column('cake_gender', sa.String(length=64), nullable=True),
     sa.Column('body', sa.String(length=140), nullable=True),
     sa.Column('timestamp', sa.DateTime(), nullable=True),
     sa.Column('buyer_id', sa.Integer(), nullable=True),
+    sa.Column('album', sa.String(length=2083), nullable=True),
     sa.ForeignKeyConstraint(['buyer_id'], ['buyer.id'], ),
     sa.PrimaryKeyConstraint('id')
     )

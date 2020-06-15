@@ -22,7 +22,11 @@ TEXT_MODE = 2
 
 
 def conditional_replace(match_object, custom_dict):
-    assert match_object.group(2) in custom_dict
+    try:
+        assert match_object.group(2) in custom_dict
+    except:
+        print(match_object.group(2))
+        raise
     gender = custom_dict[match_object.group(2)]
     if match_object.group(3)==gender:
         return match_object.group(1)
@@ -57,7 +61,7 @@ def parse_line(line, custom_dict):
     return line
 
 
-def parse_story(story_file, custom_dict):
+def parse_story(custom_dict, story_file="albums/histoire.txt"):
     state = PENDING
     parsed_list = []
 
@@ -113,5 +117,5 @@ custom_dict = {
     "cake_gender": FEMALE,
 }
 
-#parsed_story = parse_story("albums/histoire.txt", custom_dict)
+#parsed_story = parse_story(custom_dict)
 #print(parsed_story)

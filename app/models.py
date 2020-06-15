@@ -7,11 +7,12 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import jwt
 from app import db
 from app import drive
+from albums.parse_story import parse_story
 from albums.planche_to_pdf import create_album
 from albums.pdf_to_drive import upload_on_drive
 
 
-ALBUMS_PATH = "albums"
+ALBUMS_PATH = "albums/planches"
 
 def get_class_variables(class_name):
     return {key:value for key, value in class_name.__dict__.items() if not key.startswith('__') and not callable(key)}
@@ -36,13 +37,14 @@ class Buyer(db.Model):
 
 class Story(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    gender = db.Column(db.String(10))
     nickname = db.Column(db.String(64))
+    nickname_gender = db.Column(db.String(64))
     location = db.Column(db.String(64))
     dog = db.Column(db.String(64))
     friend = db.Column(db.String(64))
     friend_gender = db.Column(db.String(64))
     cake = db.Column(db.String(64))
+    cake_gender = db.Column(db.String(64))
     body = db.Column(db.String(140))
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     buyer_id = db.Column(db.Integer, db.ForeignKey('buyer.id'))
@@ -55,7 +57,8 @@ class Story(db.Model):
     def link_album(self):
         variable_dict = get_class_variables(self)
         album_name = f"{self.nickname.lower()}_{self.location.lower()}"
-        create_album(variable_dict, album_name, ALBUMS_PATH)
-        drive_url = upload_on_drive(drive, album_name, ALBUMS_PATH)
+        parsed_list = parse_story(variable_dict)
+        create_album(parsed_list, album_name, ALBUMS_PATH)
+        drive_url = upload_on_drive(drive, album_name)
         self.album = drive_url
 

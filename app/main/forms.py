@@ -8,8 +8,13 @@ from flask_babel import _, lazy_gettext as _l
 
 class OrderForm(FlaskForm):
     nickname = StringField(_l('Nickname'), validators=[DataRequired()])
-    gender = StringField(_l('Gender'), validators=[DataRequired()])
+    nickname_gender = StringField(_l('Nickname gender'), validators=[DataRequired()])
     location = StringField(_l('Location'), validators=[DataRequired()])
+    dog = StringField(_l('Dog'), validators=[DataRequired()])
+    friend = StringField(_l('Friend'), validators=[DataRequired()])
+    friend_gender = StringField(_l('Friend Gender'), validators=[DataRequired()])
+    cake = StringField(_l('Cake'), validators=[DataRequired()])
+    cake_gender = StringField(_l('Cake Gender'), validators=[DataRequired()])
     body = TextAreaField(_l('Body'),
                              validators=[Length(min=0, max=140)])
     submit = SubmitField(_l('Submit'))
