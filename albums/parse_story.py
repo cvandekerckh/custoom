@@ -21,9 +21,9 @@ FIGURE_MODE = 1
 TEXT_MODE = 2
 
 
-def conditional_replace(match_object, gender_dict):
-    assert match_object.group(2) in gender_dict
-    gender = gender_dict[match_object.group(2)]
+def conditional_replace(match_object, custom_dict):
+    assert match_object.group(2) in custom_dict
+    gender = custom_dict[match_object.group(2)]
     if match_object.group(3)==gender:
         return match_object.group(1)
     else:
@@ -44,30 +44,27 @@ def detect_new_state(line):
         return False
 
 
-def create_new_part(parsed_story, line):
+def get_figure_name(line):
     figure_name = line.split(TAG_SEPARATOR)[1]
     figure_name = figure_name.strip()
-    parsed_story[figure_name] = []
-    return parsed_story, figure_name
+    return figure_name
 
 
-def add_text_line(parsed_story, figure_name, line):
-    assert figure_name in parsed_story
-    parsed_story[figure_name].append(line)
-    return parsed_story
-
-
-def parse_line(line, custom_dict, gender_dict):
+def parse_line(line, custom_dict):
     line = line % custom_dict  # replace by custom variable
-    gender_replace = lambda x: conditional_replace(x, gender_dict)
+    gender_replace = lambda x: conditional_replace(x, custom_dict)
     line = re.sub(CONDITIONAL_RE, gender_replace, line)
     return line
 
 
-def parse_story(story_file, custom_dict, gender_dict):
+def parse_story(story_file, custom_dict):
     state = PENDING
-    parsed_story = {}
+    parsed_list = []
+
+    # State variables
+    text_content = []
     figure_name = None
+
     with open(story_file) as f:
         for line in f:
             assert state in [PENDING, FIGURE_MODE, TEXT_MODE]
@@ -75,7 +72,7 @@ def parse_story(story_file, custom_dict, gender_dict):
             # Detect first figure
             if state == PENDING:
                 if new_state == FIGURE_MODE:
-                    parsed_story, figure_name = create_new_part(parsed_story, line)
+                    figure_name = get_figure_name(line)
                     state = new_state
                 else:
                     pass
@@ -85,19 +82,22 @@ def parse_story(story_file, custom_dict, gender_dict):
                 if new_state == TEXT_MODE:
                     state = new_state
                 elif new_state == FIGURE_MODE:
-                    parsed_story, figure_name = create_new_part(parsed_story, line)
+                    figure_name = get_figure_name(line)
                 else:
                     pass
 
             # Text mode
             elif state == TEXT_MODE:
                 if new_state == FIGURE_MODE:
-                    parsed_story, figure_name = create_new_part(parsed_story, line)
+                    text = "".join(text_content)
+                    parsed_list.append([figure_name, text])
+                    text_content = []
+                    figure_name = get_figure_name(line)
                     state = new_state
                 else:
-                    line = parse_line(line, custom_dict, gender_dict)
-                    parsed_story = add_text_line(parsed_story, figure_name, line)
-    return parsed_story
+                    line = parse_line(line, custom_dict)
+                    text_content.append(line)
+    return parsed_list
 
 
 
@@ -107,14 +107,11 @@ custom_dict = {
     "nickname": "Léa",
     "friend": "Didier",
     "dog": "Patmolle",
-    "cake": "glace"
+    "cake": "glace",
+    "nickname_gender": FEMALE,
+    "friend_gender": MALE,
+    "cake_gender": FEMALE,
 }
 
-gender_dict = {
-    "nickname": FEMALE,
-    "friend": MALE,
-    "cake": FEMALE,
-}
-
-parsed_story = parse_story("histoire.txt", custom_dict, gender_dict)
+parsed_story = parse_story("albums/histoire.txt", custom_dict)
 print(parsed_story)
