@@ -113,5 +113,5 @@ custom_dict = {
     "cake_gender": FEMALE,
 }
 
-parsed_story = parse_story("albums/histoire.txt", custom_dict)
-print(parsed_story)
+#parsed_story = parse_story("albums/histoire.txt", custom_dict)
+#print(parsed_story)

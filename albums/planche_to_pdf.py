@@ -96,8 +96,9 @@ custom_dict = {
     "friend": "Didier",
     "dog": "Patmolle",
     "cake": "glace"
-    "nickname_gender": "male",
+    "nickname_gender": "female",
     "friend_gender": "male",
+    "cake_gender": "female"
 }
 
 parsed_list = parse_story("albums/histoire.txt", custom_dict)
