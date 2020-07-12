@@ -7,58 +7,64 @@
 @Figure : 1
 @Description : dans la maison des grands-parents, dans le salon, on voit la silhouette de l'enfant. À côté, le papy et et la mamy.
 @Texte :
-Aujourd'hui, je suis super content$(e)nickname_gender=female car je passe la journée chez mes grands-parents. Ils habitent à %(location)s et tout près de chez eux, se trouve une grande forêt.
-Mon papy m'a toujours promis qu'on irait s'y balader mais nous n'avons jamais eu l'occasion. Peut-être irons-nous cette après midi? En attendant, je dessine cette forêt longtemps rêvée.
-
+Aujourd'hui, je suis super content$(e)nickname_gender=female car je passe la journée chez mes grands-parents. 
+Ils habitent à %(location)s et tout près de chez eux, se trouve une grande forêt.
+Mon papy m'a toujours promis qu'on irait s'y balader 
+mais nous n'avons jamais eu l'occasion. 
+Peut-être irons-nous cette après midi? En attendant, je dessine cette forêt longtemps rêvée.
 
 @Figure : 2
 @Description : dans la cour de la maison, avec deux poules et un chat qui dort et le chien en silhouette. L'enfant joue à la balle avec le chien et le papy arrive par le fond du jardin...
 @Texte :
-Alors que je joue au ballon avec %(dog)s, le chien de mes grands-parents, mon papy s'avance pour me féliciter. Je ne comprends pas bien pourquoi...
+Alors que je joue au ballon avec %(dog)s, le chien de mes grands-parents, 
+mon papy s'avance pour me féliciter. 
+Je ne comprends pas bien pourquoi...
 Il me dit qu'il est très fier du dessin que j'ai réalisé plus tôt dans la journée.
 Pour lui, le dessin du paysage de la forêt est très ressemblant. Je rougis.
-Mon papy ne me dit pas souvent de compliments alors quand j'en reçois, je sais que c'est très sincère.
+Mon papy ne me dit pas souvent de compliments alors quand j'en reçois,
+je sais que c'est très sincère.
 Et puis, d'un coup, il m'annonce une grande nouvelle :
-
 - Mets tes bottines %(nickname)s! Je t'emmène dans la forêt!
 - Hourra!
-
 J'explose de joie et je file lacer mes chaussures.
-
 
 @Figure : 3
 @Description : peinture déjà réalisée, le papy, l'enfant et le chien sur le sentier de la forêt.
 @Texte :
-%(dog)s, %(nickname)s et son papy s'enfoncent peu à peu sur l'unique sentier de la forêt. C'est la première fois que %(nickname)s se retrouve dans une forêt aussi grande. %(nickname)s est émerveillé$(e)nickname_gender=female par la beauté de l'endroit et est en même temps, un peu impressionné$(e)nickname_gender=female par le silence régnant autour d'eux. Seuls quelques chants d'oiseaux résonnent dans l'étendue boisée. Les grands arbres sont très imposants et %(nickname)s devine à peine le sentier qui s'enfuit au loin.
+%(dog)s, %(nickname)s et son papy s'enfoncent peu à peu sur l'unique sentier de la forêt. 
+C'est la première fois que %(nickname)s se retrouve dans une forêt aussi grande. 
+%(nickname)s est émerveillé$(e)nickname_gender=female par la beauté de l'endroit et est en même temps, 
+un peu impressionné$(e)nickname_gender=female par le silence régnant autour d'eux. 
+Seuls quelques chants d'oiseaux résonnent dans l'étendue boisée. 
+Les grands arbres sont très imposants et %(nickname)s devine à peine le sentier qui s'enfuit au loin.
 On raconte à ville, que cette forêt serait enchantée mais %(nickname)s n'en sait pas plus.
-
 
 @Figure : 4
 @Description : v. photo de l'hermitage, le sentier se poursuit et on voit une petite cabane rouge-orangée au loin, elle est abandonnée. Le papy et l'enfant s'en approche. Il y a aussi un petit puits à côté.
 @Texte :
-La promenade est vraiment très agréable. L'air est frais mais il fait tellement chaud que ça fait du bien d'être à l'ombre.
+La promenade est vraiment très agréable. 
+L'air est frais mais il fait tellement chaud que ça fait du bien d'être à l'ombre.
 Soudainement, %(nickname)s aperçoit, au bout du chemin, une petite cabane rouge-orangée.
-
 - C'est par là! S'écrie le papy de %(nickname)s.
 - On va aller dans la maison papy?
-- Oui %(nickname)s. Mais ne te tracasse pas, on ne rentre pas et elle est abandonnée. C'est pour te montrer un peu. Et puis, de toute façon, notre chemin passe par là donc on est bien obligés.
+- Oui %(nickname)s. Mais ne te tracasse pas, on ne rentre pas et elle est abandonnée. 
+C'est pour te montrer un peu. Et puis, de toute façon, notre chemin passe par là donc on est bien obligés.
 
 Un peu inqui$(et)nickname_gender=male$(ète)nickname_gender=female et intrigué$(e)nickname_gender=female, %(nickname)s suit son papy et %(dog)s.
 
-
 @Figure : 5
-@Description : tous les trois sont devant la maison cette fois, plus près. Le papy tient la main du petit. Et le chien tourne autour de la cabane.
+@Description : tous les trois sont devant la maison cette fois, plus près. Le papy tient la main du petit. Et le chien tourne autour de la cabane. Phrase retirée : Si quelqu'un venait faire une bêtise, il le savait tout de suite et courrait protéger tous ses habitants. Cette forêt est vieille et enchantée.
 @Texte :
-- Tu vois petit$(e)nickname_gender=female,  cette maison appartenait au gardien de la forêt. Il veillait sur les arbres, les fleurs et les animaux. Si quelqu'un venait faire une bêtise, il le savait tout de suite et courrait protéger tous ses habitants.
+- Tu vois petit$(e)nickname_gender=female, cette maison appartenait au gardien de la forêt. 
+Il veillait sur les arbres, les fleurs et les animaux.
 - Il est où maintenant papy?
 - Il ne vit plus ici.
 - Mais, plus personne ne protège cet endroit alors?
-- Non %(nickname)s. Aujourd'hui, ceux qui dirigent préfèrent abandonner les forêts à leur sort. Mais ne t'en fais pas! Elle se porte à merveille! Cette forêt est vieille et enchantée. On raconte qu'on ne peut lui faire de mal sinon le roi de la forêt rentrerait dans une grande colère!
+- Non %(nickname)s. Aujourd'hui, ceux qui dirigent préfèrent abandonner les forêts à leur sort. Mais ne t'en fais pas! Elle se porte à merveille! On raconte qu'on ne peut lui faire de mal sinon le roi de la forêt rentrerait dans une grande colère!
 - Le roi de la forêt?
 - Oui petit$(e)nickname_gender=female, le roi de la forêt!
 - Mais, qui est-ce papy?
 - Continuons! Je t'expliquerai en chemin! Tu viens %(nickname)s?
-
 
 @Figure : 6
 @Description : les trois compagnons arrivent à la fin du chemin. Le papy voit au loin des déchets. Dessin déjà réalisé.
@@ -73,33 +79,33 @@ Le papy tend son bras et pointe une clairière remplie de détritus.
 
 - Ce n'est pas possible! Ça n'y était pas la semaine dernière! Allons voir!
 
-
 @Figure : 7
 @Description : Dessin déjà réalisé, ils observent les détritus de plus près.
 @Texte :
 - Dis papy, pourquoi un frigo, un matelas et des pneus se trouvent ici?
-
-Le vieil homme n'a pour réponse qu'un profond silence. %(nickname)s comprend alors que son papy est triste et que ces déchets ne doivent pas se trouver là.
-
+Le vieil homme n'a pour réponse qu'un profond silence. 
+%(nickname)s comprend alors que son papy est triste et que ces déchets ne doivent pas se trouver là.
 Après quelques minutes sans rien dire, le papy de %(nickname)s annonce, très décidé :
-
-- Bon, j'appelle ta mamy, ton papa et d'autres amis pour venir tout retirer, tu en penses quoi %(nickname)s?
+- Bon, j'appelle ta mamy, ton papa et d'autres amis pour venir tout retirer, 
+tu en penses quoi %(nickname)s?
 - Je pense que je suis d'accord!
 - Très bien, nous allons enlever tous ces horribles déchets!
 - Wouaf!
 
-
 @Figure : 8
 @Description : on voit une chaîne de personnes déplacer les objets.
 @Texte :
-Tandis que %(nickname)s commence à retirer des sacs de détritus avec son papy, une grande partie des amis de papy arrive en faisant des grands signes. Tous se mettent au travail et un incroyable élan de solidarité déferle sur la clairière. Tout le monde s'entraide dans la bonne humeur pour nettoyer l'endroit.
+Tandis que %(nickname)s commence à retirer des sacs de détritus avec son papy, une grande partie des amis de papy arrive en faisant des grands signes. 
+Tous se mettent au travail et un incroyable élan de solidarité déferle sur la clairière. 
+out le monde s'entraide dans la bonne humeur pour nettoyer l'endroit.
 %(friend)s est même venu$(e)friend_gender=female soutenir %(nickname)s!
-
 
 @Figure : 9
 @Description : la clairière est à nouveau propre. Tout le monde discute en buvant une boisson et un gâteau préparé par la mamy!
 @Texte :
-La clairière est maintenant débarrassée des déchets et tous les amis de la famille se retrouvent pour boire une bonne limonade maison préparée par mamy! Mais ce n'est pas tout, mamy a aussi apporté le gâteau préféré de %(nickname)s : un$(e)cake_gender=female %(cake)s.
+La clairière est maintenant débarrassée des déchets et tous les amis de la famille se retrouvent pour boire une bonne limonade maison préparée par mamy! 
+Mais ce n'est pas tout, mamy a aussi apporté le gâteau préféré de %(nickname)s : 
+un$(e)cake_gender=female %(cake)s.
 - Mmmmmh
 
 @Figure : 10
@@ -107,10 +113,10 @@ La clairière est maintenant débarrassée des déchets et tous les amis de la f
 @Texte :
 Tout le monde est maintenant parti et %(nickname)s ne peut contenir sa joie d'avoir pu rendre la forêt aussi propre qu'avant.
 
-- Tu vois %(nickname)s, certaines personnes pensent que ce genre d'endroit est une grande poubelle. Mais elles oublient que c'est la maison des animaux et des plantes. Aujourd'hui, je suis très fier de toi %(nickname)s!
+- Tu vois %(nickname)s, certaines personnes pensent que ce genre d'endroit est une grande poubelle. Mais elles oublient que c'est la maison des animaux et des plantes.
+Aujourd'hui, je suis très fier de toi %(nickname)s!
 
 Le chien aboie car il est très content aussi puis, se remettent en route.
-
 
 @Figure : 11
 @Description : Les revoilà sur le chemin de la forêt. Des petits animaux sont autour d'eux dans la forêt.
@@ -119,28 +125,33 @@ Sur le chemin du retour, %(nickname)s repense à ce que son papy lui a dit plus 
 - Papy?
 - Oui %(nickname)s?
 - Tu penses que le roi de la forêt est content aussi?
-- Sûrement! Il a sans doute vu tout le travail que tu as accompli aujourd'hui et au fond de lui, il doit te remercier très fort.
+- Sûrement! Il a sans doute vu tout le travail que tu as accompli aujourd'hui
+et au fond de lui, il doit te remercier très fort.
 - Mais, qui est-ce?
 - Tu vas peut-être le voir...
-
 
 @Figure : 12
 @Description : Sur le chemin, l'enfant, se retourne car il entend du bruit... Son papy et le chien sont déjà un peu plus en avant.
 @Texte :
-Alors qu'ils s'approchent de plus en plus de la ville de %(location)s, %(nickname)s sursaute en entendant un bruit derrière $(lui)nickname_gender=male$(elle)nickname_gender=female. Intrigué$(e)nickname_gender=female par ce léger craquement de branche, %(nickname)s décide de s'arrêter pour mieux écouter d'où provient le son...
-
+Alors qu'ils s'approchent de plus en plus de la ville de %(location)s,
+%(nickname)s sursaute en entendant un bruit derrière $(lui)nickname_gender=male$(elle)nickname_gender=female. 
+Intrigué$(e)nickname_gender=female par ce léger craquement de branche, %(nickname)s décide de s'arrêter pour mieux écouter d'où provient le son...
 
 @Figure : 13
 @Description : Planche réalisée. Le cerf s'avance vers l'enfant qui, prudent, reste près de l'arbre.
 @Texte :
-Tout à coup, %(nickname)s voit un cerf venir dans sa direction. L'enfant n'a pas peur, étrangement. %(nickname)s remarque, dans les yeux de bête, une extrême gentillesse. Sans se quitter du regard, tous deux s'approchent l'un de l'autre jusqu'à ce que le cerf décide de s'arrêter, à quelques mètres seulement de %(nickname)s.
-
+Tout à coup, %(nickname)s voit un cerf venir dans sa direction. 
+L'enfant n'a pas peur, étrangement.
+%(nickname)s remarque,
+dans les yeux de bête, une extrême gentillesse. 
+Sans se quitter du regard, tous deux s'approchent l'un de l'autre jusqu'à ce que le cerf décide de s'arrêter, à quelques mètres seulement de %(nickname)s.
 
 @Figure : 14
 @Description : Planche réalisée. Le cerf s'incline!
 @Texte :
-Et puis, doucement, le cerf incline la tête devant %(nickname)s. L'instant est solennel et les deux êtres se regardent avec respect. L'animal demeure dans cette position quelques secondes puis, aussi vite qu'il était apparu, dans un bond gigantesque, regagne la profondeur de la forêt.
-
+Et puis, doucement, le cerf incline la tête devant %(nickname)s. 
+L'instant est solennel et les deux êtres se regardent avec respect. 
+L'animal demeure dans cette position quelques secondes puis, aussi vite qu'il était apparu, dans un bond gigantesque, regagne la profondeur de la forêt.
 
 @Figure : 15
 @Description : L'enfant rejoint son papy et le chien.
@@ -149,14 +160,18 @@ Tandis que la Lune démarre sa ronde de nuit, %(nickname)s court rejoindre son p
 
 - Alors %(nickname)s, je vois que tu as fait la connaissance du roi de la forêt?
 - Oui papy.
-- Il est venu te remercier d'avoir rendu sa forêt aussi propre qu'avant. Il ne l'oubliera jamais!
-
+- Il est venu te remercier d'avoir rendu sa forêt aussi propre qu'avant.
+Il ne l'oubliera jamais!
 
 @Figure : 16
 @Description : Planche réalisée.  Le cerf regarde une dernière fois les visiteurs.
 @Texte :
-Les paroles du papy résonnent dans la tête de %(nickname)s qui n'en revient toujours pas d'avoir rencontré le roi de la forêt! Ces deux êtres sont maintenant connectés, c'est sûr!
-Poussé$(e)nickname_gender=female par son intuition, %(nickname)s décide de regarder une dernière fois derrière $(lui)nickname_gender=male$(elle)nickname_gender=female. Au loin, éclairé par les rayons de la Lune, le grand cerf s'est aussi retourné. Il observe avec douceur la marche des visiteurs.
+Les paroles du papy résonnent dans la tête de %(nickname)s
+qui n'en revient toujours pas d'avoir rencontré le roi de la forêt! 
+Ces deux êtres sont maintenant connectés, c'est sûr!
+Poussé$(e)nickname_gender=female par son intuition, %(nickname)s décide de regarder une dernière fois derrière $(lui)nickname_gender=male$(elle)nickname_gender=female.
+Au loin, éclairé par les rayons de la Lune, le grand cerf s'est aussi retourné. 
+Il observe avec douceur la marche des visiteurs.
 
 Depuis ce jour, %(nickname)s s'est juré de toujours veiller sur la forêt et de toujours respecter la nature, mère de tous les êtres sur la Terre.
 

@@ -73,6 +73,7 @@ def parse_story(custom_dict, story_file="albums/histoire.txt"):
         for line in f:
             assert state in [PENDING, FIGURE_MODE, TEXT_MODE]
             new_state = detect_new_state(line)
+
             # Detect first figure
             if state == PENDING:
                 if new_state == FIGURE_MODE:
@@ -101,6 +102,8 @@ def parse_story(custom_dict, story_file="albums/histoire.txt"):
                 else:
                     line = parse_line(line, custom_dict)
                     text_content.append(line)
+    text = "".join(text_content)
+    parsed_list.append([figure_name, text])
     return parsed_list
 
 
