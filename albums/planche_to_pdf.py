@@ -28,6 +28,7 @@ IMG_EXT = "jpg"
 
 def prepare_template():
     pdf = FPDF('P', METRIC, DOCUMENT_SIZE)
+    pdf.add_page()  # add blank page at start
     return pdf
 
 

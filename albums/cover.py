@@ -18,9 +18,12 @@ FONT_LOCATION = "albums/fonts/alepo/Alepo.otf"
 
 TITLE = "Le Roi de la forêt"
 TEXT_HEIGHT = 15 # mm
-FONT_SIZE = 70
-TITLE_SHIFT_X = 30
-TITLE_SHIFT_Y = 25
+FONT_SIZE = 40
+TITLE_SHIFT_X = -70
+TITLE_SHIFT_Y = 15
+NAME_FONT_SIZE = 60
+AND_FONT_SIZE = 30
+TITLE_FONT_SIZE = 40
 
 SPINE_FILE = "albums/cover/spine_background.png"
 
@@ -33,18 +36,24 @@ def prepare_cover():
     return pdf
 
 
-def insert_title(pdf, title):
+def insert_title(pdf, nickname, title):
     title_x = DOCUMENT_SIZE[0]/2 + BLEED + SAFETY + TITLE_SHIFT_X
     title_y = BLEED + SAFETY + TITLE_SHIFT_Y
-    pdf.set_xy(title_x, title_y)
-    pdf.cell(
-        0,
-        TEXT_HEIGHT,
-        title,
-        0,
-        0,
-        'L',
-    )
+    title_list = [nickname, "&", title]
+    title_font_sizes = [NAME_FONT_SIZE, AND_FONT_SIZE, TITLE_FONT_SIZE]
+    jump = 0
+    for title_part, title_font_size in zip(title_list, title_font_sizes):
+        pdf.set_font(FONT_NAME, size = title_font_size)
+        pdf.set_xy(title_x, title_y + jump)
+        pdf.cell(
+            0,
+            TEXT_HEIGHT,
+            title_part,
+            0,
+            1,
+            'C',
+        )
+        jump = jump + TEXT_HEIGHT
     return pdf
 
 
@@ -83,16 +92,16 @@ def insert_cover_image(pdf):
     return pdf
 
 
-def assemble_cover():
+def assemble_cover(nickname):
     pdf = prepare_cover()
     pdf = insert_cover_image(pdf)
-    pdf = insert_title(pdf, TITLE)
+    pdf = insert_title(pdf, nickname, TITLE)
     pdf = add_spine(pdf)
     return pdf
 
 
-def create_cover(output_filename):
-    pdf = assemble_cover()
+def create_cover(nickname, output_filename):
+    pdf = assemble_cover(nickname)
     pdf.output(f"{output_filename}.pdf")
 
 
