@@ -19,11 +19,16 @@ FONT_LOCATION = "albums/fonts/alepo/Alepo.otf"
 TITLE = "Le Roi de la forêt"
 TEXT_HEIGHT = 15 # mm
 FONT_SIZE = 40
-TITLE_SHIFT_X = -70
+TITLE_SHIFT_X = 10
 TITLE_SHIFT_Y = 15
 NAME_FONT_SIZE = 60
 AND_FONT_SIZE = 30
 TITLE_FONT_SIZE = 40
+
+RESUME_FONT_SIZE = 20
+RESUME_EPS = 10
+RESUME_SHIFT_X = 0
+RESUME_SHIFT_Y = 90
 
 SPINE_FILE = "albums/cover/spine_background.png"
 
@@ -54,6 +59,24 @@ def insert_title(pdf, nickname, title):
             'C',
         )
         jump = jump + TEXT_HEIGHT
+    return pdf
+
+
+
+def insert_resume(pdf, parsed_list):
+    text_width = 0.5*DOCUMENT_SIZE[0] - 2*BLEED - 2*RESUME_EPS
+    resume_x = BLEED + SAFETY + RESUME_SHIFT_X
+    resume_y = BLEED + SAFETY + RESUME_SHIFT_Y
+    resume_content = parsed_list[0][1]
+    pdf.set_font(FONT_NAME, size = RESUME_FONT_SIZE)
+    pdf.set_xy(resume_x, resume_y)
+    pdf.multi_cell(
+        text_width,
+        TEXT_HEIGHT,
+        resume_content,
+        0,
+        'C',
+    )
     return pdf
 
 
@@ -92,16 +115,17 @@ def insert_cover_image(pdf):
     return pdf
 
 
-def assemble_cover(nickname):
+def assemble_cover(parsed_list, nickname):
     pdf = prepare_cover()
     pdf = insert_cover_image(pdf)
     pdf = insert_title(pdf, nickname, TITLE)
+    pdf = insert_resume(pdf, parsed_list)
     pdf = add_spine(pdf)
     return pdf
 
 
-def create_cover(nickname, output_filename):
-    pdf = assemble_cover(nickname)
+def create_cover(parsed_list, nickname, output_filename):
+    pdf = assemble_cover(parsed_list, nickname)
     pdf.output(f"{output_filename}.pdf")
 
 
