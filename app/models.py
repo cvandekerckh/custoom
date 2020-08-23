@@ -9,6 +9,7 @@ from app import db
 from app import drive
 from albums.parse_story import parse_story
 from albums.planche_to_pdf import create_album
+from albums.cover import create_cover
 from albums.pdf_to_drive import upload_on_drive
 
 
@@ -49,6 +50,7 @@ class Story(db.Model):
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     buyer_id = db.Column(db.Integer, db.ForeignKey('buyer.id'))
     album = db.Column(db.String(2083))
+    cover = db.Column(db.String(2083))
 
     def __repr__(self):
         return '<Story {}>'.format(self.nickname)
@@ -57,8 +59,13 @@ class Story(db.Model):
     def link_album(self):
         variable_dict = get_class_variables(self)
         album_name = f"{self.nickname.lower()}_{self.location.lower()}"
-        parsed_list = parse_story(variable_dict)
-        create_album(parsed_list, album_name, ALBUMS_PATH)
-        drive_url = upload_on_drive(drive, album_name)
-        self.album = drive_url
+        cover_name = f"{album_name}_cover"
+        parsed_album= parse_story(variable_dict, story_file="albums/histoire.txt")
+        parsed_cover= parse_story(variable_dict, story_file="albums/resume.txt")
+        create_album(parsed_album, album_name, ALBUMS_PATH)
+        create_cover(parsed_cover, self.nickname, cover_name)
+        album_url = upload_on_drive(drive, album_name)
+        cover_url = upload_on_drive(drive, cover_name)
+        self.album = album_url
+        self.cover = cover_url
 
