@@ -20,11 +20,14 @@ logger = logging.getLogger(__name__)
 # from the summary document generate by factor overview
 # Note : cannot be run in docker since gspread not available
 
-HOME_DIR = os.path.expanduser('~')
-CLIENT_SECRET_FILE = os.path.join(HOME_DIR, 'client_secret.json')
-CREDENTIALS_DIR = os.path.join(HOME_DIR, '.credentials')
-OAUTH_TOKEN_PATH = os.path.join(CREDENTIALS_DIR,
-                                'sheets.googleapis.com-python-quickstart.json')
+#HOME_DIR = os.path.expanduser('~')
+#CLIENT_SECRET_FILE = os.path.join(HOME_DIR, 'client_secret.json')
+#CREDENTIALS_DIR = os.path.join(HOME_DIR, '.credentials')
+#OAUTH_TOKEN_PATH = os.path.join(CREDENTIALS_DIR,
+#                               'sheets.googleapis.com-python-quickstart.json')
+CREDENTIALS_DIR = 'credentials'
+CLIENT_SECRET_FILE = os.path.join(CREDENTIALS_DIR, 'client_secrets.json')
+OAUTH_TOKEN_PATH = os.path.join(CREDENTIALS_DIR, 'credentials_spreadsheet.json')
 
 # If modifying these scopes, delete your previously saved credentials
 # at ~/.credentials/sheets.googleapis.com-python-quickstart.json
