@@ -1,5 +1,10 @@
 @Figure : 0
 
 @Texte :
-%(nickname)s adore passer du temps avec ses grands-parents. Mais aujourd’hui, c’est un peu spécial. Pour la première fois, avec son papy et le chien %(dog)s, %(nickname)s va découvrir la forêt de %(location)s. On raconte qu’elle renferme bien des mystères! Ensemble, ils vont vivre une journée incroyable et surtout, ils vont faire une rencontre exceptionnelle et inoubliable. Il est grand temps de découvrir leurs aventures et de visiter cette forêt enchantée!
+%(nickname)s adore passer du temps avec ses grands-parents. 
+Mais aujourd’hui, c’est un peu spécial. 
+Pour la première fois, avec son papy et le chien %(dog)s, %(nickname)s va découvrir la forêt de %(location)s. 
+On raconte qu’elle renferme bien des mystères! 
+Ensemble, ils vont vivre une journée incroyable et surtout, ils vont faire une rencontre exceptionnelle et inoubliable. 
+Il est grand temps de découvrir leurs aventures et de visiter cette forêt enchantée!
 

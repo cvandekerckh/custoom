@@ -10,7 +10,7 @@ COVER_EPS = 0.2
 
 TEMPLATE_FILE = "albums/cover/lulu_cover_template.png"
 
-COVER_FILE = "albums/cover/cover_filt.png"
+COVER_FILE = "albums/cover/cover_v4.png"
 COVER_DIMENSION = (3678, 1264)
 
 FONT_NAME = "alepo"
@@ -24,11 +24,14 @@ TITLE_SHIFT_Y = 15
 NAME_FONT_SIZE = 60
 AND_FONT_SIZE = 30
 TITLE_FONT_SIZE = 40
+TITLE_TEXT_COLOR = (0, 0 ,0)
 
 RESUME_FONT_SIZE = 20
 RESUME_EPS = 10
-RESUME_SHIFT_X = 0
-RESUME_SHIFT_Y = 90
+RESUME_SHIFT_X = 60
+RESUME_SHIFT_Y = 40
+RESUME_WIDTH_RATE = 0.75
+RESUME_TEXT_COLOR = (255, 255, 255)
 
 SPINE_FILE = "albums/cover/spine_background.png"
 
@@ -42,6 +45,8 @@ def prepare_cover():
 
 
 def insert_title(pdf, nickname, title):
+    r, g, b = TITLE_TEXT_COLOR
+    pdf.set_text_color(r, g, b)
     title_x = DOCUMENT_SIZE[0]/2 + BLEED + SAFETY + TITLE_SHIFT_X
     title_y = BLEED + SAFETY + TITLE_SHIFT_Y
     title_list = [nickname, "&", title]
@@ -64,7 +69,9 @@ def insert_title(pdf, nickname, title):
 
 
 def insert_resume(pdf, parsed_list):
-    text_width = 0.5*DOCUMENT_SIZE[0] - 2*BLEED - 2*RESUME_EPS
+    r, g, b = RESUME_TEXT_COLOR
+    pdf.set_text_color(r, g, b)
+    text_width = int(RESUME_WIDTH_RATE*(0.5*DOCUMENT_SIZE[0] - 2*BLEED - 2*RESUME_EPS))
     resume_x = BLEED + SAFETY + RESUME_SHIFT_X
     resume_y = BLEED + SAFETY + RESUME_SHIFT_Y
     resume_content = parsed_list[0][1]
@@ -120,7 +127,7 @@ def assemble_cover(parsed_list, nickname):
     pdf = insert_cover_image(pdf)
     pdf = insert_title(pdf, nickname, TITLE)
     pdf = insert_resume(pdf, parsed_list)
-    pdf = add_spine(pdf)
+    # pdf = add_spine(pdf)
     return pdf
 
 
