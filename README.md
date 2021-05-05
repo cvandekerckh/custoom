@@ -1,5 +1,6 @@
 # Custoom
-Flask script for website 
+This project creates a web-app to order some customized child story book ! 
+One day, this will maybe see the day of light...
 
 # A. Development preparation
 ##  Step 0 : download elastic search
