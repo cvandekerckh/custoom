@@ -33,7 +33,7 @@ click on https://myaccount.google.com/lesssecureapps and  unlock
 
 # Production Details
 ##  Step 1 : ssh connect to instance and prepare environment
-`ssh -i ~/.ssh/gc corentinvdk@104.155.161.68`
+`ssh -i ~/.ssh/gc username@104.155.161.68`
 (protect your instance : https://blog.miguelgrinberg.com/)
 
 ## Step 2 : install environment
@@ -80,7 +80,7 @@ flask translate compile
 setting up db
 mysql -u root -p
 mysql> create database custoom character set utf8 collate utf8_bin;
-mysql> create user 'custoom'@'localhost' identified by 'sZQ9NdjghCGykLwaWjPyfQUu';
+mysql> create user 'custoom'@'localhost' identified by 'XXXpassword';
 mysql> grant all privileges on custoom.(star) to 'custoom'@'localhost';
 mysql> flush privileges;
 mysql> quit;
@@ -114,8 +114,7 @@ service nginx status
 # Step 7 : get certificate using certbot
 see tutorial. If issues:
 sudo apt-get install dirmngr
-sudo certbot certonly --webroot -w /home/debian/custoom/app/static -d thementaldoctors.com
-
+sudo certbot certonly --webroot -w /home/debian/custoom/app/static -d XXX.com
 # Step 8 : update application
 (venv) $ git pull                              # download the new version
 (vend) $ (pipenv install) if modif made
@@ -132,8 +131,8 @@ allow https on compute :)
 
 # API Queries
 - get token:
-http --auth cvandekerckh:<password> POST https://thementaldoctors.com/api/tokens
+http --auth cvandekerckh:<password> POST https://XXX.com/api/tokens
 
 - get user:
 http GET https://thementaldoctors.com/api/users/1 \
-    "Authorization:Bearer pC1Nu9wwyNt8VCj1trWilFdFI276AcbS"
+    "Authorization:Bearer XXXpassword"
